@@ -1,0 +1,546 @@
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 21:49:41 -0300
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "SiteBonsFrutos_development" does not exist
+):
+  
+activerecord (5.2.4.4) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.4.4) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.4.4) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.4.4) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.4.4) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.4.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.4.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.4.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.4.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.4.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.4.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.4.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.4.4) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.4.4) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.4.4) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (917.5ms)[0m  [1m[35mCREATE DATABASE "SiteBonsFrutos_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (528.3ms)[0m  [1m[35mCREATE DATABASE "SiteBonsFrutos_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (87.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (55.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7174324397232144705)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-29 00:50:06.860852"], ["updated_at", "2020-12-29 00:50:06.860852"]]
+  ↳ bin/rails:9
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7174324397232144705)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 21:50:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/contato"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-12-28 21:50:21 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jonas/.rvm/gems/ruby-2.7.2/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jonas/.rvm/gems/ruby-2.7.2/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (1.5ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 21:57:02 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (103.6ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "arvore.png" is not present in the asset pipeline.
+):
+    16:     <%= csp_meta_tag %>
+    17: 
+    18:     <!-- for FF, Chrome, Opera -->
+    19:     <link rel="icon" type="image/png" href="<%= image_url('arvore.png')%>" sizes="16x16">
+    20:     <link rel="icon" type="image/png" href="<%= image_url('arvore.png')%>" sizes="32x32">
+    21: 
+    22:     <!-- for IE -->
+  
+app/views/application/index.html.erb:19:in `_app_views_application_index_html_erb___2583043717637519452_11460'
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:00:18 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (865.1ms)
+Completed 500 Internal Server Error in 870ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<#<Class:0x00005633d93ca290>:0x00005633d938b900>
+Did you mean?  javascript_path
+               javascript_tag):
+    31:   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    32:   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    33:   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    34:   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    35:  
+    36:   </head>
+    37: 
+  
+app/views/application/index.html.erb:34:in `_app_views_application_index_html_erb__729825685282786354_11460'
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:00:52 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (128.4ms)
+  Rendered application/index.html.erb within layouts/application (135.0ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `contact_path' for #<#<Class:0x00005633d93ca290>:0x00007f74a4e8d7b0>
+Did you mean?  controller_path):
+    22:         <div class="underline"></div>
+    23:       </li>
+    24:       <li class="nav-item">
+    25:         <a class="nav-link" href="<%= contact_path %>">
+    26:           Contato
+    27:         </a>
+    28:         <div class="underline"></div>
+  
+app/views/application/_navbar.html.erb:25:in `_app_views_application__navbar_html_erb___1829429509188483958_12320'
+app/views/application/index.html.erb:39:in `_app_views_application_index_html_erb__729825685282786354_12300'
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:02:57 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (99.5ms)
+  Rendered application/index.html.erb within layouts/application (249.4ms)
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `contact_path' for #<#<Class:0x000055f5e1063d58>:0x000055f5e36ff908>
+Did you mean?  controller_path):
+    22:         <div class="underline"></div>
+    23:       </li>
+    24:       <li class="nav-item">
+    25:         <a class="nav-link" href="<%= contact_path %>">
+    26:           Contato
+    27:         </a>
+    28:         <div class="underline"></div>
+  
+app/views/application/_navbar.html.erb:25:in `_app_views_application__navbar_html_erb___1885938545199625435_11800'
+app/views/application/index.html.erb:39:in `_app_views_application_index_html_erb__4474620714474169662_11460'
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:02:58 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (126.2ms)
+  Rendered application/index.html.erb within layouts/application (135.3ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `contact_path' for #<#<Class:0x000055f5e1063d58>:0x00007fab9d7a04b8>
+Did you mean?  controller_path):
+    22:         <div class="underline"></div>
+    23:       </li>
+    24:       <li class="nav-item">
+    25:         <a class="nav-link" href="<%= contact_path %>">
+    26:           Contato
+    27:         </a>
+    28:         <div class="underline"></div>
+  
+app/views/application/_navbar.html.erb:25:in `_app_views_application__navbar_html_erb___1885938545199625435_12500'
+app/views/application/index.html.erb:39:in `_app_views_application_index_html_erb__4474620714474169662_12480'
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:04:11 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.4ms)
+  Rendered application/_presentation.html.erb (0.5ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:04:48 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.4ms)
+  Rendered application/_presentation.html.erb (0.7ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:04:49 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.8ms)
+  Rendered application/_presentation.html.erb (0.7ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:04:50 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.8ms)
+  Rendered application/_presentation.html.erb (1.2ms)
+  Rendered application/_quem_somos.html.erb (0.4ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.6ms)
+  Rendered application/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:04:51 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.5ms)
+  Rendered application/_presentation.html.erb (0.6ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:05:33 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.5ms)
+  Rendered application/_presentation.html.erb (0.5ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (123.9ms)
+Completed 200 OK in 137ms (Views: 133.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:05:42 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.6ms)
+  Rendered application/_presentation.html.erb (0.9ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:05:43 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.8ms)
+  Rendered application/_map.html.erb (0.2ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:07:00 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.6ms)
+  Rendered application/_map.html.erb (0.2ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (139.8ms)
+Completed 200 OK in 154ms (Views: 150.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:09:00 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.6ms)
+  Rendered application/_map.html.erb (0.2ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (111.3ms)
+Completed 200 OK in 124ms (Views: 121.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:10:14 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (1.4ms)
+  Rendered application/_map.html.erb (0.2ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 121ms (Views: 117.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:15:22 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.7ms)
+  Rendered application/_map.html.erb (0.2ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (145.8ms)
+Completed 200 OK in 153ms (Views: 152.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:16:01 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.7ms)
+  Rendered application/_map.html.erb (0.2ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (111.8ms)
+Completed 200 OK in 119ms (Views: 118.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:16:31 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.7ms)
+  Rendered application/_map.html.erb (0.2ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (109.0ms)
+Completed 200 OK in 123ms (Views: 119.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:19:30 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (111.1ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "jquery.waypoints.min.js" is not present in the asset pipeline.
+):
+    32:   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    33:   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    34:   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    35:   <%= javascript_include_tag 'jquery.waypoints.min' %>
+    36:   <%= javascript_include_tag 'countUp.js' %>
+    37:   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    38:   <script src="https://kit.fontawesome.com/f9680fb690.js" crossorigin="anonymous"></script>
+  
+app/views/application/index.html.erb:35:in `_app_views_application_index_html_erb___1076003336842151373_12500'
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:19:42 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.4ms)
+  Rendered application/_presentation.html.erb (0.5ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:19:55 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.6ms)
+  Rendered application/_presentation.html.erb (0.5ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:19:59 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.5ms)
+  Rendered application/_map.html.erb (0.2ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:20:25 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.4ms)
+  Rendered application/_presentation.html.erb (0.5ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:25:19 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.8ms)
+  Rendered application/_presentation.html.erb (1.0ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.6ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:25:28 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.7ms)
+  Rendered application/_map.html.erb (0.2ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:25:36 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (1.2ms)
+  Rendered application/_map.html.erb (0.6ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:25:41 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.4ms)
+  Rendered application/_presentation.html.erb (0.5ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:30:02 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.4ms)
+  Rendered application/_presentation.html.erb (0.5ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:30:53 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.5ms)
+  Rendered application/_presentation.html.erb (0.5ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:31:02 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.7ms)
+  Rendered application/_presentation.html.erb (0.8ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.1ms)
+  Rendered application/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-28 22:31:14 -0300
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.5ms)
+  Rendered application/_presentation.html.erb (0.6ms)
+  Rendered application/_quem_somos.html.erb (0.1ms)
+  Rendered application/_servicos.html.erb (0.1ms)
+  Rendered application/_footer.html.erb (0.2ms)
+  Rendered application/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:31:52 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.9ms)
+  Rendered application/_map.html.erb (0.5ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contato" for 127.0.0.1 at 2020-12-28 22:32:22 -0300
+Processing by ApplicationController#contact as HTML
+  Rendering application/contact.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (0.4ms)
+  Rendered application/_map.html.erb (0.2ms)
+  Rendered application/_footer2.html.erb (0.1ms)
+  Rendered application/contact.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
